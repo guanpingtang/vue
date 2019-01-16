@@ -1,0 +1,79 @@
+.layout-outer {
+    min-width: 1280px;
+    .layout-header-box {
+        display: flex;
+        padding: 0 30px 0 44px;
+        border-bottom: 1px solid #f1f1f1;
+        .layout-title-box {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            img {
+                height: 21px;
+                margin-right: 10px;
+            }
+            h2 {
+
+            }
+        }
+
+        .ivu-menu-horizontal {
+            height: 71px;
+            line-height: 71px;
+            .ivu-menu-item-active,
+            .ivu-menu-item:hover,
+            .ivu-menu-item,
+            .ivu-menu-submenu,
+            .ivu-menu-submenu:hover {
+                border-bottom: none!important;
+            }
+            .ivu-menu-item-active,
+            .ivu-menu-item:hover,
+            .ivu-menu-submenu:hover {
+                color: #D32D26;
+            }
+        }
+    }
+    .ivu-menu-horizontal.ivu-menu-light:after {
+        background-color: transparent!important;
+    }
+    .layout-footer-outer {
+        background-color: #333333;
+        .layout-footer-box {
+            height: 179px;
+            width: 1200px;
+            margin: 0 auto;
+            padding: 24px 0 27px 0;
+            display: flex;
+            .layout-left {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                img {
+                    width:111px;
+                    height:28px;
+                    margin-bottom: 15px;
+                }
+                p {
+                    font-size:16px;
+                    color:rgba(255,255,255,1);
+                    line-height:21px;
+                }
+            }
+            .layout-right {
+                width: 115px;
+                text-align: center;
+                img {
+                    width: 100px;
+                    height: 100px;
+                    margin-bottom: 9px;
+                }
+                p {
+                    font-size:14px;
+                    color:rgba(141,141,141,1);
+                    line-height:19px;
+                }
+            }
+        }
+    }
+}

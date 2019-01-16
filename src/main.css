@@ -1,0 +1,43 @@
+html {
+    height: 100%;
+}
+body {
+    font-size: 14px;
+    height: 100%;
+}
+
+#app {
+    height: 100%;
+    overflow: auto;
+}
+.layout-outer {
+    height: 100%;
+}
+.iconFont {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+.ivu-layout {
+    background-color: #f6f6f6;
+}
+.ivu-form-item-label {
+    font-size: 14px!important;
+}
+
+li {
+    list-style: none;
+}
+
+.layout-text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.layout-index1 {
+    z-index: 0!important;
+}
+.layout-display-none {
+    display: none!important;
+}

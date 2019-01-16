@@ -1,0 +1,102 @@
+.layout-picture-lib-outer,
+.layout-picture-lib-modal-outer{
+    .layout-avatar-box {
+        width: 96px;
+        height: 96px;
+        border-radius: 50px;
+        overflow: hidden;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .layout-btn-outer {
+            width: 100%;
+            height: 100%;
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            .layout-btn-box {
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                display: flex;
+                align-items: center;
+                justify-items: center;
+
+                i {
+                    font-size: 16px;
+                    color: rgba(255, 255, 255, 0.8);
+                }
+                i:nth-child(2):hover {
+                    color: #42b983;
+                }
+                i:nth-child(3):hover {
+                    color: #ff0000;
+                }
+            }
+        }
+    }
+    .layout-avatar-box:hover .layout-btn-outer {
+        display: block;
+    }
+    .layout-avatar-upload-btn {
+        width: 96px;
+        height:96px;
+        line-height: 92px;
+        border: 1px dashed #dcdee2;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .layout-cropper-outer {
+        display: flex;
+
+        .layout-cropper-view-box {
+            flex: 1;
+            padding-left: 20px;
+
+            img {
+                width: 128px;
+                height: 128px;
+            }
+            img:last-child {
+                margin-top: 30px;
+                border-radius: 100px;
+            }
+        }
+    }
+    .ivu-upload-drag {
+        border: none;
+    }
+    .layout-choosed-box {
+        border: 3px solid #2b85e4;
+    }
+    .layout-lib-outer {
+        .layout-lib-box {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .layout-lib-avatar-item {
+                width: 96px;
+                height: 96px;
+                border-radius: 50px;
+                overflow: hidden;
+                cursor: pointer;
+                margin-left: 10px;
+                margin-bottom: 10px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
