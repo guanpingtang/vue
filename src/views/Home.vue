@@ -149,7 +149,7 @@
                         window.open('http://cea.h3c.com/ai/static/');
                         break;
                     case 'yanshi':
-                        window.open('http://cea.h3c.com');
+                        window.open('http://cea.h3c.com/web');
                         break;
                     case 'wiki':
                         break;
