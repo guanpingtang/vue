@@ -7,20 +7,36 @@
         <div class="layout-home-box">
             <Carousel v-model="bannerValue" loop>
                 <CarouselItem>
-                    <div class="layout-carousel-outer">
+                    <div
+						class="layout-carousel-outer"
+						:style="{
+							background: 'url(' + banner1 + ') center no-repeat',
+						}"
+					>
                         <div class="layout-carousel-box">
                             <h1>网络发展到哪里，党建工作就要覆盖到哪里！</h1>
                             <h1>——习近平</h1>
-                            <div class="layout-button">
+                            <div class="layout-button" @click="mftyClick">
                                 <p>免费体验</p>
                             </div>
                         </div>
                     </div>
                 </CarouselItem>
                 <CarouselItem>
-                    <div class="layout-carousel-outer">
-                        图片2
-                    </div>
+                    <div
+						class="layout-carousel-outer"
+						:style="{
+							background: 'url(' + banner2 + ') center no-repeat',
+						}"
+					></div>
+                </CarouselItem>
+                <CarouselItem>
+                    <div
+						class="layout-carousel-outer"
+						:style="{
+							background: 'url(' + banner3 + ') center no-repeat',
+						}"
+					></div>
                 </CarouselItem>
             </Carousel>
             <div class="layout-superiority-outer">
@@ -117,6 +133,9 @@
     import jyaiddyxxxghx from '../../assets/images/jyaiddyxxxghx.png';
     import jyaiddyxxxghximg from '../../assets/images/jyaiddyxxxghximg.png';
     import jyaiddyxxxghxRed from '../../assets/images/jyaiddyxxxghx-red.png';
+    import banner1 from '../../assets/images/banner1.png';
+    import banner2 from '../../assets/images/banner2.png';
+    import banner3 from '../../assets/images/banner3.png';
     import jywkdxxfs from '../../assets/images/jywkdxxfs.png';
     import jywkdxxfsimg from '../../assets/images/jywkdxxfsimg.png';
     import jywkdxxfsRed from '../../assets/images/jywkdxxfs-red.png';
@@ -141,6 +160,9 @@
                 kxjczx,
                 xxjyzx,
                 arrow,
+                banner1,
+                banner2,
+                banner3,
                 tabSelect: 'jywkdxxff',
                 tabs: [
                     {
@@ -243,6 +265,9 @@
             },
         },
         methods: {
+			mftyClick() {
+				window.open('https://cea.h3c.com/web');
+			},
             tabSelectFunc(key) {
                 this.tabSelect = key;
             },

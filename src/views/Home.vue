@@ -9,7 +9,7 @@
 <template>
     <div class="layout-outer">
         <header class="layout-header-box">
-            <div class="layout-title-box">
+            <div @click="routerToCea" class="layout-title-box" style="cursor: pointer;">
                 <img :src="logo" />
                 <h2>新华三党建云</h2>
             </div>
@@ -139,6 +139,9 @@
             }
         },
         methods: {
+			routerToCea() {
+				location.assign('https://cea.h3c.com');
+			},
             select(name) {
                 switch (name) {
                     case 'home':
@@ -146,15 +149,15 @@
                         this.$router.push(`/${name}`);
                         break;
                     case 'ai':
-                        window.open('http://cea.h3c.com/ai/static/');
+                        window.open('https://cea.h3c.com/ai/static');
                         break;
                     case 'yanshi':
-                        window.open('http://cea.h3c.com/web');
+                        window.open('https://cea.h3c.com/web');
                         break;
                     case 'wiki':
                         break;
                     case 'wenda':
-                        window.open('http://cea.h3c.com');
+                        window.open('https://zhiliao.h3c.com/questions/catesDis/1414');
                         break;
                     case 'ziliao':
                         break;
