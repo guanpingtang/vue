@@ -149,10 +149,10 @@
                         this.$router.push(`/${name}`);
                         break;
                     case 'ai':
-                        window.open('https://cea.h3c.com/ai/static');
+                        window.open('https://cea.h3c.com/ai/static/');
                         break;
                     case 'yanshi':
-                        window.open('https://cea.h3c.com/web');
+                        window.open('http://cea.h3c.com/web');
                         break;
                     case 'wiki':
                         break;
