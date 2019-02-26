@@ -115,7 +115,7 @@
             <div class="layout-plus13-outer">
                 <div class="layout-plus13-box">
                     <h1 class="layout-title">1＋3模式</h1>
-                    <p class="layout-desc">AI＋智慧党建平台采用1＋3模式，即1个统一的管理平台，3种不同的接入方式（门户网站、手机APP、手机H5页面）组织工作者、党务工作 者、党员群众、可以通过不同的途径、便捷的获取党建资源即服务</p>
+                    <p class="layout-desc">党建云平台采用1＋3模式，即1个统一的管理平台，3种不同的接入方式（门户网站、手机APP、手机H5页面）组织工作者、党务工作 者、党员群众、可以通过不同的途径、便捷的获取党建资源即服务</p>
                     <img :src="plus13" />
                 </div>
             </div>
@@ -212,7 +212,7 @@
                     {
                         key: 'gzlqfwddjnrk',
                         title: '高质量、全方位的权威党建内容库',
-                        content: '充分运用人工智能技术，通过对党员言行进行智能化分析 实现党员修养、性格、风格等153个维度画像',
+                        content: '内置5000+套学习课程、考试题库、问卷题库，内容由10+个省市级党校专家精心制作',
                         img: gzlqfwddjnrkimg,
                     },
                 ],
@@ -266,7 +266,7 @@
         },
         methods: {
 			mftyClick() {
-				window.open('https://cea.h3c.com/web');
+				window.open('http://cea.h3c.com/web');
 			},
             tabSelectFunc(key) {
                 this.tabSelect = key;
