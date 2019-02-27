@@ -54,7 +54,7 @@
                 <div class="layout-left">
                     <div style="flex: 1;"></div>
                     <img :src="logo" />
-                    <p>版权所有 2018新华三技术有限公司版权所有京ICP备09032636号</p>
+                    <p>版权所有 2019新华三技术有限公司版权所有京ICP备09032636号</p>
                     <div style="flex: 1;"></div>
                 </div>
                 <div class="layout-right">
@@ -109,6 +109,7 @@
     import VDistpicker from 'v-distpicker';
     import logo from '../assets/images/logo.png';
     import appDownload from '../assets/images/appdownload.png';
+    import axios from '../assets/util/request';
 
     export default {
         name: 'home',
@@ -124,7 +125,20 @@
                     email: '',
                     phone: '',
                     title: '',
-                    area: '',
+                    areaConfig: {
+                        province: {
+                            value: '',
+                            code: '',
+                        },
+                        city: {
+                            value: '',
+                            code: '',
+                        },
+                        area: {
+                            value: '',
+                            code: '',
+                        },
+                    },
                     address: '',
                 },
             };
@@ -133,10 +147,9 @@
             activeName() {
                 if (this.$route.path.includes('/product')) {
                     return 'product';
-                } else {
-                    return 'home';
                 }
-            }
+                    return 'home';
+            },
         },
         methods: {
             select(name) {
@@ -167,10 +180,19 @@
                 }
             },
             changeArea(area) {
-                this.shiyongData.area = area;
+                this.shiyongData.areaConfig = area;
             },
             save() {
-                this.$Message.success('申请已提交！');
+                // todo 提交到后台
+                const { areaConfig } = this.shiyongData;
+                this.shiyongData.area = `${areaConfig.province.value}${areaConfig.city.value}${areaConfig.area.value}`;
+                const promise = axios.post('/api/v1/trial/apply/add', this.shiyongData);
+                this.loading = true;
+                promise.then(() => {
+                    this.$Message.success('申请已提交！');
+                }).catch((err) => {
+                    window.notice(err.message);
+                });
             },
         },
     };
