@@ -5,7 +5,7 @@
 <template>
     <div class="layout-home-outer">
         <div class="layout-home-box">
-            <Carousel v-model="bannerValue" loop>
+            <Carousel autoplay autoplay-speed="8000" v-model="bannerValue" loop>
                 <CarouselItem>
                     <div
 						class="layout-carousel-outer"
@@ -51,7 +51,7 @@
                             v-for="item in tabs"
                             class="layout-tab"
                             :key="item.key"
-                            @click="tabSelectFunc(item.key)"
+                            @mouseenter="tabSelectFunc(item.key)"
                         >
                             <img :src="tabSelect === item.key ? item.iconSelect : item.icon" />
                             <p>{{item.title}}</p>
@@ -200,7 +200,7 @@
                     {
                         key: 'jyaiddyxxxghx',
                         title: '基于AI的党员学习效果画像技术',
-                        content: '充分运用人工智能技术，通过对党员言行进行智能化分析 实现党员修养、性格、风格等153个维度画像',
+                        content: '充分运用人工智能技术，通过对党员言行进行智能化分析 实现党员修养、性格、风格等145个维度画像',
                         img: jyaiddyxxxghximg,
                     },
                     {
